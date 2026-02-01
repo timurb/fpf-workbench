@@ -12,10 +12,6 @@
 - Links to linked concepts are recommended in all files
 
 ## FPF invariants (always-on)
-- Read the following sections from `refs/fpf/FPF-Spec.md`:
-  -  A.1 - Holonic Foundation (entity composition)
-  -  A.7 - Strict Distinction (avoid category errors: Object≠Description, Role≠Work)
-  -  A.10 - Evidence Graph (traceability)
 - Strict Distinction / IDS (A.7): Object ≠ Description ≠ Carrier; Role ≠ Work; Method ≠ MethodDescription
 - Context locality and scope discipline (A.2.6): any rule/meaning is bounded-context-local; avoid global claims.
 - Plan–Run split: plans/specs are not execution logs; execution facts are separate.
@@ -63,3 +59,5 @@ RECOMMENDATION: [Which + why, or "need your input on X"]
 ## Repo-Specific Rules
 - Never use `cat << EOF` to generate files. If you cannot create a file via normal editing, stop and report the error to the user.
 - When using bullets in responses, include an ID for each bullet so the user can refer to them.
+- Never read files under `.cache/`
+- Always use the project `venv` Python for commands and tests

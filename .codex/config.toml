@@ -2,7 +2,7 @@
 
 # Model defaults (can override per session)
 model = "gpt-5.2"                         # example from Codex docs :contentReference[oaicite:7]{index=7}
-model_reasoning_effort = "xhigh"          # minimal|low|medium|high|xhigh :contentReference[oaicite:8]{index=8}
+model_reasoning_effort = "high"           # minimal|low|medium|high|xhigh :contentReference[oaicite:8]{index=8}
 model_verbosity = "medium"                # low|medium|high :contentReference[oaicite:9]{index=9}
 model_reasoning_summary = "auto"          # auto|concise|detailed|none :contentReference[oaicite:10]{index=10}
 

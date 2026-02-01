@@ -7,3 +7,5 @@ docs/_generated/*
 
 # local caches
 .cache/
+
+venv/
