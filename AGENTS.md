@@ -10,10 +10,17 @@
 - File naming: lowercase + kebab-case, stable paths. Prefer moving/renaming via git mv.
 
 ## FPF invariants (always-on)
-- Strict Distinction / IDS: Object ≠ Description/Spec ≠ Carrier(file) ≠ Work(event).
-- Context locality: any rule/meaning is bounded-context-local; avoid global claims.
+- Read the following sections from `refs/fpf/FPF-Spec.md`:
+  -  A.1 - Holonic Foundation (entity composition)
+  -  A.7 - Strict Distinction (avoid category errors: Object≠Description, Role≠Work)
+  -  A.10 - Evidence Graph (traceability)
+- Strict Distinction / IDS (A.7): Object ≠ Description ≠ Carrier; Role ≠ Work; Method ≠ MethodDescription
+- Context locality and scope discipline (A.2.6): any rule/meaning is bounded-context-local; avoid global claims.
 - Plan–Run split: plans/specs are not execution logs; execution facts are separate.
 - Unknown is not coerced: missing evidence -> abstain/degrade; never default-to-pass.
+- Evidence chains (A.10): Every claim needs evidence reference
+- Role-Method-Work alignment (A.15): Clear separation of intent, plan, execution
+
 
 ## Retrieval protocol (no section IDs required)
 When you apply an FPF rule:
@@ -26,3 +33,27 @@ If you can’t find a supporting excerpt -> mark Unknown and ask what evidence/n
 - Prefer small, reviewable diffs.
 - For multi-file edits: propose a plan, then apply changes with clear commits.
 - Run repo checks when available (see `tools/`).
+
+## Decision Framework (Quick Mode)
+**When to use:** Single decisions, easily reversible, doesn't need persistent evidence trail.
+**Process:** Present this framework to the user and work through it together.
+
+```
+DECISION: [What we're deciding]
+CONTEXT: [Why now, what triggered this]
+
+OPTIONS:
+1. [Option A]
+   + [Pros]
+   - [Cons]
+
+2. [Option B]
+   + [Pros]
+   - [Cons]
+
+WEAKEST LINK: [What breaks first in each option?]
+
+REVERSIBILITY: [Can we undo in 2 weeks? 2 months? Never?]
+
+RECOMMENDATION: [Which + why, or "need your input on X"]
+```
