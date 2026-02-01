@@ -1,0 +1,13 @@
+{
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+
+  "markdown.preview.breaks": true,
+  "markdown.validate.enabled": true,
+
+  "search.useIgnoreFiles": true
+}

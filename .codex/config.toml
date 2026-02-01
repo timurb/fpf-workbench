@@ -1,0 +1,17 @@
+# .codex/config.toml — project-scoped defaults
+
+# Model defaults (can override per session)
+model = "gpt-5.2"                         # example from Codex docs :contentReference[oaicite:7]{index=7}
+model_reasoning_effort = "xhigh"          # minimal|low|medium|high|xhigh :contentReference[oaicite:8]{index=8}
+model_verbosity = "medium"                # low|medium|high :contentReference[oaicite:9]{index=9}
+model_reasoning_summary = "auto"          # auto|concise|detailed|none :contentReference[oaicite:10]{index=10}
+
+# Safety/ops
+approval_policy = "on-request"            # keep human-in-the-loop for commands :contentReference[oaicite:11]{index=11}
+sandbox_mode = "workspace-write"          # allow file edits inside workspace :contentReference[oaicite:12]{index=12}
+
+# Make it easier to open referenced files from Codex output
+file_opener = "vscode"                    # :contentReference[oaicite:13]{index=13}
+
+# Optional: keep transcripts (adjust if you prefer no local logs)
+history.persistence = "save-all"          # :contentReference[oaicite:14]{index=14}

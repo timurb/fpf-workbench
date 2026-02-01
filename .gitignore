@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+
+# generated
+docs/_generated/*
+!docs/_generated/.keep
+
+# local caches
+.cache/

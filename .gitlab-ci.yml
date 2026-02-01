@@ -1,0 +1,17 @@
+stages:
+  - checks
+
+link_check:
+  stage: checks
+  image: python:3.12-slim
+  script:
+    - python tools/check_links.py
+
+toc_build:
+  stage: checks
+  image: python:3.12-slim
+  script:
+    - python tools/build_toc.py
+  artifacts:
+    paths:
+      - docs/_generated/toc.md
