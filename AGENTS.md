@@ -1,13 +1,15 @@
 # AGENTS.md — repository operating rules (FPF + text-repo)
 
 ## Source-of-truth pointers
-- FPF spec lives at: `refs/fpf/FPF-Spec.md` (synced from upstream; do not edit).
+- FPF spec lives at: `refs/fpf/FPF-Spec.md` (synced from upstream; never edit this file).
 - Repository docs live under `docs/` and must stay readable in GitLab.
+- Files under `tools/` are helper tools and you should not read, process and verify them unless I explicitly ask you about that.
 
 ## Link & file conventions (GitLab-readable)
 - Use standard Markdown links: `[Title](relative/path.md)`.
 - Do NOT use wiki-links like `[[Title]]` in committed files.
 - File naming: lowercase + kebab-case, stable paths. Prefer moving/renaming via git mv.
+- Links to linked concepts are recommended in all files
 
 ## FPF invariants (always-on)
 - Read the following sections from `refs/fpf/FPF-Spec.md`:
@@ -57,3 +59,7 @@ REVERSIBILITY: [Can we undo in 2 weeks? 2 months? Never?]
 
 RECOMMENDATION: [Which + why, or "need your input on X"]
 ```
+
+## Repo-Specific Rules
+- Never use `cat << EOF` to generate files. If you cannot create a file via normal editing, stop and report the error to the user.
+- When using bullets in responses, include an ID for each bullet so the user can refer to them.
