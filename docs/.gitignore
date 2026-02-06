@@ -4,14 +4,6 @@ Thumbs.db
 .trash/
 .cache/
 
-
-# generated
-docs/_generated/*
-!docs/_generated/.keep
-!docs/_generated/toc.md
-
-venv/
-
 # Ignore volatile UI-related state
 .obsidian/workspace.json
 .obsidian/app.json

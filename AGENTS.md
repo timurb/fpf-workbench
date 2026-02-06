@@ -8,6 +8,7 @@
 ## Link & file conventions (GitLab-readable)
 - Use standard Markdown links: `[Title](relative/path.md)`.
 - Do NOT use wiki-links like `[[Title]]` in committed files.
+- Do NOT wrap links in code blocks; use Markdown links inline in prose.
 - File naming: lowercase + kebab-case, stable paths. Prefer moving/renaming via git mv.
 - Links to linked concepts are recommended in all files
 
@@ -58,7 +59,11 @@ RECOMMENDATION: [Which + why, or "need your input on X"]
 
 ## Repo-Specific Rules
 - Never use `cat << EOF` to generate files. If you cannot create a file via normal editing, stop and report the error to the user.
+- In all documents except those under `docs/_sources/`, use neutral, professional language. Professional jargon is allowed if it is not overly conversational or slang-heavy.
+- In `docs/`, only link to `docs/_sources/` when the page content actually uses information from that source.
+- When making substantive semantic decisions or changes, capture DRR(s) immediately in `docs/work/drr/` (and update `docs/work/drr/README.md`) in the same change; do not defer DRR writing to later turns.
 - When using bullets in responses, include an ID for each bullet so the user can refer to them.
    - This does not apply to code blocks, quoted templates, or when the user explicitly requests a paragraph-only response.
 - Never read files under `.cache/`
 - Always use the project `venv` Python for commands and tests
+- If facts in different files contradict each other, do not make changes and ask the user how to proceed
