@@ -10,7 +10,7 @@ USAGE
   exit 2
 }
 
-[ -z "$2" ] && usage
+[ -z "${2:""}" ] && usage
 
 SRC=${1%/}
 DST=${2%/}
@@ -28,6 +28,9 @@ while IFS= read -r pat; do
 done <<'EOF'
 .git/
 .venv/
+docs/work/
+docs/_generated/
+docs/_sources/
 node_modules/
 dist/
 build/
