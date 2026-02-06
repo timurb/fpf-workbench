@@ -59,5 +59,6 @@ RECOMMENDATION: [Which + why, or "need your input on X"]
 ## Repo-Specific Rules
 - Never use `cat << EOF` to generate files. If you cannot create a file via normal editing, stop and report the error to the user.
 - When using bullets in responses, include an ID for each bullet so the user can refer to them.
+   - This does not apply to code blocks, quoted templates, or when the user explicitly requests a paragraph-only response.
 - Never read files under `.cache/`
 - Always use the project `venv` Python for commands and tests

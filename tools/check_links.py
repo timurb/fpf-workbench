@@ -15,7 +15,10 @@ def strip_anchor(target: str) -> str:
 
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
-    md_files = list(root.rglob("*.md"))
+    # AGENTS.md is operational guidance, not repo-doc content; don't treat it as
+    # a link-checked artifact.
+    skip = {root / "AGENTS.md"}
+    md_files = [p for p in root.rglob("*.md") if p not in skip]
 
     broken = []
     for md in md_files:
