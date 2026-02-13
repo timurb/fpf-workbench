@@ -67,3 +67,4 @@ RECOMMENDATION: [Which + why, or "need your input on X"]
 - Never read files under `.cache/`
 - Always use the project `venv` Python for commands and tests
 - If facts in different files contradict each other, do not make changes and ask the user how to proceed
+- Always use `apply_patch` for file edits. If `apply_patch` cannot be used, stop and report the blocker to the user before making any file changes.

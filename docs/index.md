@@ -6,6 +6,7 @@
 - Рабочие артефакты (backlog): [docs/work/index.md](work/index.md)
 - Как вносить изменения: [docs/contributing.md](contributing.md)
 - Конвенции оформления: [docs/style-guide.md](style-guide.md)
+- Переносимые решения по структуре репозитория: [docs/repository-structure-decisions-portable.md](repository-structure-decisions-portable.md)
 
 FPF (используется как методологическая опора):
 - Спека (synced, не редактировать): [refs/fpf/FPF-Spec.md](../refs/fpf/FPF-Spec.md)
