@@ -1,0 +1,40 @@
+name: Sync FPF Spec
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync-fpf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Sync FPF spec from upstream
+        run: tools/sync_fpf.sh
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore(fpf): sync upstream spec"
+          title: "chore(fpf): sync upstream spec"
+          add-paths: |
+            refs/fpf/FPF-Spec.md
+            refs/fpf/UPSTREAM.txt
+          body: |
+            This PR was created automatically by `.github/workflows/sync-fpf.yml`.
+
+            Updated files:
+            - `refs/fpf/FPF-Spec.md`
+            - `refs/fpf/UPSTREAM.txt`
+          branch: chore/sync-fpf-spec
+          delete-branch: true
+          labels: |
+            automation
+            fpf
