@@ -12,3 +12,6 @@ Defaults:
 
 Automated update:
 - `.github/workflows/sync-fpf.yml` runs scheduled sync and opens a PR when changes are detected.
+
+Metadata behavior:
+- `refs/fpf/UPSTREAM.txt` is updated only on effective sync (spec content changed, first sync, or upstream URL/path changed).
