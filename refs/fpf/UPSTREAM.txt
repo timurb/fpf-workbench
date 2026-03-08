@@ -1,4 +1,4 @@
 upstream_url=https://github.com/ailev/FPF.git
 upstream_spec_path=FPF-Spec.md
-upstream_rev=33e48a55b44c279bf81f528df84437f02adb2f25
-synced_at_utc=2026-03-05T03:58:39Z
+upstream_rev=1ed1edd34c9224bb18e12ed48b105d2efc3c47f9
+synced_at_utc=2026-03-08T03:57:54Z
